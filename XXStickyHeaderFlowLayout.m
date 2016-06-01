@@ -34,7 +34,9 @@
         
         NSCollectionViewLayoutAttributes *layoutAttributes = [self layoutAttributesForSupplementaryViewOfKind:NSCollectionElementKindSectionHeader atIndexPath:indexPath];
         
-        [attributesOfAllItems addObject:layoutAttributes];
+        if (layoutAttributes) {
+            [attributesOfAllItems addObject:layoutAttributes];
+        }
         
     }];
     
